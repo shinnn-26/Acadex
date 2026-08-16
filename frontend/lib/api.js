@@ -1,0 +1,3 @@
+export const API=process.env.NEXT_PUBLIC_API_URL||"http://localhost:5000/api";
+export const getToken=()=>typeof window==="undefined"?null:localStorage.getItem("acadex_token");
+export async function api(path,options={}){const token=getToken();const r=await fetch(API+path,{...options,headers:{"Content-Type":"application/json",...(token?{Authorization:`Bearer ${token}`} : {}),...(options.headers||{})}});const d=await r.json();if(!r.ok)throw new Error(d.message||"Request failed");return d}
