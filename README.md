@@ -1,6 +1,6 @@
 # ACADEX ULTIMATE — FULL WORKING PROJECT
 
-## Features
+#Features
 - Student login with JWT
 - Dashboard: score, attendance, assignment average and status
 - Subject performance
@@ -13,7 +13,6 @@
 - Express backend
 
 ## IMPORTANT: Do this exactly
-
 ### 1. Install PostgreSQL and create database
 Open pgAdmin Query Tool and run:
 ```sql
